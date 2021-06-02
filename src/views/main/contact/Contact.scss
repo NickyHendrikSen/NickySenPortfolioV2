@@ -1,0 +1,217 @@
+*{
+    font-family: 'Ubuntu', 'sans-serif';
+}
+
+.aboutContent{
+    display: block;
+    width: 100%;
+    .aboutContent-top{
+        height: 100vh;
+        width: 100%;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        span{
+            font-weight: bold;
+            font-size: 100px;
+            color: crimson;
+            margin: 0px 20px;
+        }
+    }
+
+  
+
+    
+
+}
+
+.titleWrapper{
+  text-align: center;
+}
+ .cube {
+   -webkit-transform-style: preserve-3d;
+   -webkit-animation: spin 3s infinite linear;
+   position: relative;
+   width: 100px;
+   height: 100px;
+   display: inline-block;
+ }
+ 
+ .cube div {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    box-shadow: inset 0px 0px 0px 1px rgba(10, 0, 0, 0.2);
+    background: crimson;
+    display: block;
+    position: absolute;
+ }
+ 
+ .cube div.top {
+    -webkit-transform: rotateX(90deg); 
+   margin-top: -50px;
+ }
+ 
+ .cube div.right {
+    -webkit-transform: rotateY(90deg); 
+   margin-left: 50px;
+ }
+ 
+ .cube div.bottom {
+    -webkit-transform: rotateX(-90deg); 
+   margin-top: 50px;
+ }
+ 
+ .cube div.left {
+    -webkit-transform: rotateY(-90deg); 
+   margin-left: -50px;
+ }
+ 
+ .cube div.front {
+    -webkit-transform: translateZ(50px);
+ }
+ 
+ .cube div.back {
+    -webkit-transform: translateZ(-50px) rotateX(180deg);
+ }
+ 
+ @-webkit-keyframes spin {
+   0% {-webkit-transform: rotateX(-20deg) rotateY(20deg);}
+   100% {-webkit-transform: rotateX(-20deg) rotateY(740deg);}
+ }
+ .container {
+  font-family: 'Ubuntu', 'sans-serif';
+  display: block;
+  margin:auto;
+  text-align: center;
+  border-radius: 5px;
+  // background-color: #f2f2f2;
+  padding: 20px;
+  width: 50%;
+  box-shadow: 0 0 5px 0 crimson; 
+  border-radius: 4px;
+  backdrop-filter: blur(10px);
+  color: white;
+  @media only screen and(max-width: 950px){
+    width: 70%;
+  }
+}
+
+label {
+  float: left;
+}
+
+input[type=text], [type=email], textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  outline: none;
+  box-shadow: 0 0 5px 0 white; 
+  backdrop-filter: blur(10px);
+}
+
+input[type=submit] {
+  background-color: rgba(243, 71, 105, 0.376);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+
+input[type=submit]:hover {
+  background-color: crimson;
+}
+
+.before-enter{
+  opacity: 0;
+  transform: translateY(-50px);
+  transition-duration: 2s;
+  transition-timing-function: ease;
+  transition-property: opacity, transform;
+}
+
+.enter{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.emailSection{
+  padding: 10%;
+  .emailContainer{
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  .or{
+    display: block;
+    color: crimson;
+    text-align: center;
+    margin: 8%;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Ubuntu', 'sans-serif';
+  }
+  .contacts{
+    display: flex;
+    justify-content: center;
+    .linkedin{
+      color: #0E76A8;
+    }
+    *{
+      transition-duration: 0.5s;
+      &:hover{
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+@media only screen and(max-width: 700px){
+  .aboutContent-top{
+    span{
+      font-size: 60px !important;
+    }
+  }
+  .cube{
+    width: 60px !important;
+    height: 60px !important;
+    div{
+      width: 60px !important;
+      height: 60px !important;
+      line-height: 60px !important;
+    }
+  }
+  .cube div.top {
+   margin-top: -30px  !important;
+ }
+ 
+ .cube div.right {
+   margin-left: 30px  !important;
+ }
+ 
+ .cube div.bottom {
+   margin-top: 30px  !important;
+ }
+ 
+ .cube div.left {
+   margin-left: -30px  !important;
+ }
+ 
+ .cube div.front {
+    -webkit-transform: translateZ(30px)  !important; 
+ }
+ 
+ .cube div.back {
+    -webkit-transform: translateZ(-30px)  !important;
+ }
+}

@@ -1,32 +1,59 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <div class="content">
+    <Header />
+      <transition name="fade"
+        leave-active-class="animated fadeOutLeft"
+        enter-active-class="animated fadeInLeft"
+        mode="out-in" >
+          <router-view />
+      </transition>
   </div>
 </template>
 
+
+<script>
+import Header from '@/components/header/Header.vue'
+
+export default {
+  name: 'App',
+  components: {
+    Header
+  }
+}
+</script>
+
 <style lang="scss">
+section{
+  min-height:100vh;
+  height:auto;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Poppin 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
 }
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+body{
+  background-color:black;
 }
+*{
+  padding: 0;
+  margin: 0;
+}
+.vertical-align{
+  position:absolute;
+  transform:translateY(-50%);
+  -ms-transform:translateY(-50%);
+}
+
+.fade-leave-to,
+.fade-enter-from{
+  opacity:0;
+  // transform:translateX(50%);
+}
+.fade-enter-active, .fade-leave-active{
+  transition: all .5s ease !important;
+}
+
 </style>

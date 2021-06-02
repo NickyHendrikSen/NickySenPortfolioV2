@@ -1,0 +1,54 @@
+*{
+    font-family: 'Ubuntu', 'sans-serif';
+}
+
+.portfolioContent{
+  font-family: 'Ubuntu', 'sans-serif';
+  .portfolioContent-top{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div{
+      animation: titleGradientAnimation 5s ease-in-out infinite;
+      font-size: 100px;
+      color: crimson;
+      font-weight: bold;
+      background: linear-gradient(to right, white 10%, crimson 10%, crimson 110%, white 110%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200% auto;
+      background-clip: text;
+      text-fill-color: transparent;
+      background-position: 50% center;
+      @media only screen and(max-width: 700px){
+        font-size: 60px;
+      }
+    }
+  }
+}
+
+.before-enter{
+  opacity: 0;
+  transform: translateY(-50px);
+  transition-duration: 2s;
+  transition-timing-function: ease;
+  transition-property: opacity, transform;
+}
+
+.enter{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+@keyframes titleGradientAnimation {
+  50% {
+    background-position: 250% center;
+  }
+  100%{
+    background-position: 100% center;
+  }
+}
